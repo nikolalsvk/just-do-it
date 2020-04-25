@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>JUST DO IT</title>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const todoList = document.getElementById("todo-list")
+      const form = document.getElementById("todo-form")
+
+      form.addEventListener("submit", function(e) {
+        e.preventDefault()
+
+        const todoInput = document.getElementById("todo-input")
+        const item = todoInput.value.trim()
+
+        if (item === '') return
+
+        const newLI = document.createElement('li');
+
+        newLI.appendChild(document.createTextNode(item));
+
+        todoList.appendChild(newLI);
+
+        todoInput.value = ''
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <h1>JUST DO IT</h1>
+
+  <ul id="todo-list">
+  </ul>
+
+  <form id="todo-form">
+    <input autocomplete='off' type="text" id="todo-input">
+    <input type="submit" value='Add a TODO'>
+  </form>
+</body>
+</html>
