@@ -2,40 +2,15 @@
 <head>
   <title>JUST DO IT</title>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const todoList = document.getElementById("todo-list")
-      const form = document.getElementById("todo-form")
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-      form.addEventListener("submit", function(e) {
-        e.preventDefault()
-
-        const todoInput = document.getElementById("todo-input")
-        const item = todoInput.value.trim()
-
-        if (item === '') return
-
-        const newLI = document.createElement('li');
-
-        newLI.appendChild(document.createTextNode(item));
-
-        todoList.appendChild(newLI);
-
-        todoInput.value = ''
-      })
-    })
-  </script>
+  <script src="todoList.js"></script>
 </head>
 
 <body>
   <h1>JUST DO IT</h1>
 
-  <ul id="todo-list">
-  </ul>
-
-  <form id="todo-form">
-    <input autocomplete='off' type="text" id="todo-input">
-    <input type="submit" value='Add a TODO'>
-  </form>
+  <div id="react-container"></div>
 </body>
 </html>

@@ -4,6 +4,16 @@ Motivational TODO list
 
 ## Running
 
-Open index.html in your favorite browser
+You need to install needed packages with:
 
-That's it for now, cheers :beers:
+```bash
+$ npm install
+```
+
+Then, run babel and open index.html in the browser:
+
+```bash
+$ npx babel --watch src --out-dir . --presets react-app/prod
+```
+
+That's it, cheers :beers:
