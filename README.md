@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./just-do-it.gif?raw=true" alt="JUST DO IT" />
+</p>
+
 # JUST DO IT!
 
 Motivational TODO list
@@ -10,10 +14,12 @@ You need to install needed packages with:
 $ npm install
 ```
 
-Then, run babel and open index.html in the browser:
+Then, run:
 
 ```bash
-$ npx babel --watch src --out-dir . --presets react-app/prod
+$ npm start
 ```
+
+And visit http://localhost:3000/
 
 That's it, cheers :beers:

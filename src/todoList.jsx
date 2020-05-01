@@ -1,25 +1,28 @@
-'use strict';
+import React, { Component } from 'react';
 
-class TodoList extends React.Component {
+class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {items: [], currentItem: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange = event => {
+  handleChange(event) {
     this.setState({currentItem: event.target.value});
 
     event.preventDefault();
-  };
+  }
 
-  handleSubmit = event => {
+  handleSubmit(event) {
     this.setState(prevState => ({
       items: [...prevState.items, this.state.currentItem],
       currentItem: '',
     }));
 
     event.preventDefault();
-  };
+  }
 
   render() {
     const {items, currentItem} = this.state;
@@ -41,7 +44,4 @@ class TodoList extends React.Component {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  let domContainer = document.querySelector('#react-container');
-  ReactDOM.render(<TodoList />, domContainer);
-});
+export default TodoList;
